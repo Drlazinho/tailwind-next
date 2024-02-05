@@ -1,7 +1,5 @@
 import { Logo } from '@/components/Sidebar/Logo'
 import {
-  Cog,
-  LifeBuoy,
   Search,
   BarChart,
   CheckSquare,
@@ -9,9 +7,12 @@ import {
   Home,
   SquareStack,
   Users,
+  LifeBuoy,
+  Cog,
 } from 'lucide-react'
-import { NavItem } from './MainNavigation/NavItem'
+import { NavItem } from './NavItem'
 import { UsedSpaceWidget } from './UsedSpaceWidget'
+import { Profile } from './Profile'
 
 export function Sidebar() {
   return (
@@ -25,6 +26,7 @@ export function Sidebar() {
           placeholder="Search"
         />
       </div>
+
       <nav className="space-y-0.5">
         <NavItem title="Home" icon={Home} />
         <NavItem title="Dashboard" icon={BarChart} />
@@ -41,6 +43,10 @@ export function Sidebar() {
         </nav>
 
         <UsedSpaceWidget />
+
+        <div className="h-px bg-zinc-200" />
+
+        <Profile />
       </div>
     </aside>
   )
